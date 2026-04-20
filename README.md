@@ -196,7 +196,7 @@ FastEthernet0 Connection:(default port)
 
   #### Подключаемся через console к S1 и S2 для проверки интерфейсов f0/1.  
   ##### S1:  
-S2#show interface f0/1  
+S1#show interface f0/1  
 FastEthernet0/1 is up, line protocol is up (connected)  
  ####  Hardware is Lance, address is 0004.9a28.8701 (bia 0004.9a28.8701) - MAC-адрес коммутатора  
  BW 100000 Kbit, DLY 1000 usec,  
@@ -225,7 +225,7 @@ FastEthernet0/1 is up, line protocol is up (connected)
      0 output buffer failures, 0 output buffers swapped out  
      
   ##### S2:  
-  S1#show interface f 0/1  
+  S2#show interface f 0/1  
 FastEthernet0/1 is up, line protocol is up (connected)  
 ####  Hardware is Lance, address is 00e0.b031.d101 (bia 00e0.b031.d101) - MAC-адрес коммутатора  
  BW 100000 Kbit, DLY 1000 usec,  
@@ -282,7 +282,7 @@ C:\>arp -a
 | 192.168.1.12  | 0001.c921.3804    | dynamic  |
 
   Поскольку я проверял доступность устройств в процессе её построения, то в таблице отобразились ip адреса с сопоставлеными им mac-адресами устройств.  
-C помощью команды ping отправляю запросы S1, S1, PC-A.
+C помощью команды ping отправляю запросы S1, S2, PC-A.
 Подключаюсь через терминал к 
 Во всех случаях пришёл ответ о удачной передаче пакетов:  
  #### Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)  
